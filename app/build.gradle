@@ -28,12 +28,12 @@ android {
 }
 
 def lifecycleExtensionVersion = '1.1.1'
-def butterKnifeVersion = '10.1.0'
+def butterKnifeVersion = '10.2.3'
 def supportVersion = '29.0.0'
 def retrofitVersion = '2.9.0'
-def glideVersion = '4.9.0'
-def rxJavaVersion = '2.1.1'
-def daggerVersion = '2.14.1'
+def glideVersion = '4.10.0'
+def rxJavaVersion = '3.0.0'
+def dagger_version = "2.35.1"
 def mockitoVersion = '2.11.0'
 
 dependencies {
@@ -48,31 +48,31 @@ dependencies {
     //Retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
-    implementation "com.squareuo.retrofit2:adapter-rxjava2:$retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
 
     //Support Desigin
-    implementation "com.android.support:design:$supportVersion"
+    //implementation "com.android.support:design:$supportVersion"
 
     //LifeCicle
     implementation "android.arch.lifecycle:extensions:$lifecycleExtensionVersion"
 
     //ButterKnife
     implementation "com.jakewharton:butterknife:$butterKnifeVersion"
-    annotationProcessor "com.jakewharton:butterknife-compier:$butterKnifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$butterKnifeVersion"
 
     //RxJava
-    implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
-    implementation "io.reactivex.rxjava2:rxandroid:$rxJavaVersion"
+    implementation "io.reactivex.rxjava3:rxjava:$rxJavaVersion"
+    implementation "io.reactivex.rxjava3:rxandroid:$rxJavaVersion"
 
     //Glider
     implementation "com.github.bumptech.glide:glide:$glideVersion"
 
     //Dagger
-    implementation "com.google.dagger:dagger:$daggerVersion"
-    implementation "com.google.dagger>dagger-android-suport:$daggerVersion"
-    implementation "androidx.legacy:legacy-support-v4:1.0.0"
-    annotationProcessor "com.google.dagger.:dagger-compiler:$daggerVersion"
-    annotationProcessor "com.google.dagger:dagger-android-processor:$daggerVersion"
+    implementation "com.google.dagger:dagger:$dagger_version"
+    annotationProcessor "com.google.dagger:dagger-compiler:$dagger_version"
+    //implementation "androidx.legacy:legacy-support-v4:1.0.0"
+    //annotationProcessor "com.google.dagger.:dagger-compiler:$daggerVersion"
+    //annotationProcessor "com.google.dagger:dagger-android-processor:$daggerVersion"
 
     //Mockito
     testImplementation "org.mockito:mockito-inline:$mockitoVersion"
