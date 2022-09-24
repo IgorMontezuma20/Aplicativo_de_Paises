@@ -6,7 +6,7 @@ public class CountryModel {
     @SerializedName("name")
     String countryName;
 
-    @SerializedName("name")
+    @SerializedName("capital")
     String capital;
 
     @SerializedName("flagPNG")
