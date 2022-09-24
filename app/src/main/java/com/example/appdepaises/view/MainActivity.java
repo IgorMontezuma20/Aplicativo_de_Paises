@@ -52,6 +52,12 @@ public class MainActivity extends AppCompatActivity {
 
         countriesList.setLayoutManager(new LinearLayoutManager(this));
         countriesList.setAdapter(adapter);
+
+        refreshLayout.setOnRefreshListener(() -> {
+            viewModel.refresh();
+            refreshLayout.setRefreshing(false);
+        });
+
         observerViewModel();
     }
 
