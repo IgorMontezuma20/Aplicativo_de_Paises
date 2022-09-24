@@ -52,6 +52,12 @@ public class MainActivity extends AppCompatActivity {
 
         countriesList.setLayoutManager(new LinearLayoutManager(this));
         countriesList.setAdapter(adapter);
+
+        refreshLayout.setOnRefreshListener(() -> {
+            viewModel.refresh();
+            refreshLayout.setRefreshing(false);
+        });
+
         observerViewModel();
     }
 
@@ -62,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
                 adapter.updateCountries(countryModels);
             }
         });
-        viewModel.CountryLoadError.observe(this, isError -> {
+        viewModel.countryLoadError.observe(this, isError -> {
             if(isError != null){
                 listError.setVisibility(isError ? View.VISIBLE : View.GONE);
             }

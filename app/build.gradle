@@ -31,8 +31,10 @@ def lifecycleExtensionVersion = '1.1.1'
 def butterKnifeVersion = '10.2.3'
 def supportVersion = '29.0.0'
 def retrofitVersion = '2.9.0'
+def gsonVersion = '2.1.0'
 def glideVersion = '4.10.0'
-def rxJavaVersion = '3.0.0'
+def rxJavaVersion = '2.2.10'
+def rxAndroidVersion = '2.1.0'
 def dagger_version = "2.35.1"
 def mockitoVersion = '2.11.0'
 
@@ -47,7 +49,7 @@ dependencies {
 
     //Retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
-    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$gsonVersion"
     implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
 
     //Support Desigin
@@ -61,8 +63,8 @@ dependencies {
     annotationProcessor "com.jakewharton:butterknife-compiler:$butterKnifeVersion"
 
     //RxJava
-    implementation "io.reactivex.rxjava3:rxjava:$rxJavaVersion"
-    implementation "io.reactivex.rxjava3:rxandroid:$rxJavaVersion"
+    implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
 
     //Glider
     implementation "com.github.bumptech.glide:glide:$glideVersion"
